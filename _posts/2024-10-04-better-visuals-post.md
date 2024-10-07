@@ -18,8 +18,10 @@ display_image: true
 
 -   **Overview of Plotnine**
     -   Plotnine is a Python data visualization library that allows users to create simple or complex graphics using a grammar of graphics approach. This method helps you to build visualizations by layering components from the ground up, picking and choosing what elements you want your visual to contain.
+
 -   **History and Development**
     -   Plotnine was developed as a Python adaptation of R’s ggplot2, a package which has been widely embraced due to its intuitive syntax and versatility. The library has evolved through community contributions, continuously integrating new features and updates to improve the user experience, and to allow anyone to create stunning visuals in Python.
+
 -   **Installation and Setup**
     -   To install plotnine, you first need to know which package manager you use. If you're unsure, I recommend this <a href="https://www.jumpingrivers.com/blog/python-package-managers-pip-conda-poetry/" target="_blank" > guide </a>
     -   Then, run the following command from your terminal (if using pip):
@@ -47,7 +49,7 @@ display_image: true
 
         {%- endhighlight -%} 
 
-    <img src="{{site.url}}/{{site.baseurl}}/assets/img/basic_p9.png" alt="Basic Plot" />
+        <img src="{{site.url}}/{{site.baseurl}}/assets/img/basic_p9.png" alt="Basic Plot" />
 
     - For more complicated visuals, see the plotnine <a href="https://plotnine.org/reference/" target="_blank"> documentation </a>, or any guide for R's ggplot2
 
@@ -61,6 +63,7 @@ Before diving into plotnine, we need to ensure that our data has been cleaned, w
 
 -   **Data Preparation**
     -   Data visualization begins with clean, well-structured data. Proper data cleaning involves identifying and correcting errors, dealing with missing values, and ensuring that data types are appropriate for analysis. This can be done using tools like Pandas.
+
     -   Let's use the palmerpenguins dataset as an example. The data is mostly clean already, however the following code removes any missing values and creates a new feature that will help us with our analysis later on. 
     
         {%- highlight python -%} 
@@ -112,8 +115,10 @@ Labels can make or break your visual, so putting in a little extra work with the
 
 -   **Importance of Clear Labels**
     -   Clear labeling is crucial for effective communication in data visualizations. Labels provide context, making it easier for viewers to interpret the information presented.
+
 -   **Customizing Labels in Plotnine**
     -   In plotnine, you can manually adjust labels to improve clarity. Let's start with the following graph. What are we looking at? Who knows! 
+
 
     <img src="{{site.url}}/{{site.baseurl}}/assets/img/unlabeled_plot.png" alt="Unlabeled Plot" />
 
@@ -149,8 +154,10 @@ Colors can make your visuals pop, but too much color can be distracting...
 
 -   **The Role of Color in Visualization**
     -   Color can significantly influence how data is perceived. It helps highlight trends and differentiate between categories, enhancing the overall effectiveness of a visual.
+
 -   **Choosing and Applying Color Palettes**
     -   Resources like <a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3" target="_blank">Color Brewer</a> and <a href="https://color.adobe.com" target="_blank">Adobe Color</a> provide color palettes tailored for data visualization, or a simple Google Search can get the job done as well! Choose colors that align with your theme but aren't so crazy that they detract from the overall image.
+
 -   **Balancing Color Usage**
     -   Use color to draw attention to key data points without overwhelming the viewer. A good rule of thumb is to stick to a maximum of three to six colors in a single visualization. For example, this graph shows Bill Length vs. Bill Depth for all penguins, with different species represented by different colors. 
 
@@ -173,7 +180,7 @@ Colors can make your visuals pop, but too much color can be distracting...
         {%- endhighlight -%}
         <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_plot.png" alt="Color Plot" />
 
-    -   But what if we want to further classify our penguins by sex? Choosing similar colors to our original three can help us to further differentiate between Male and Female penguins while still maintaining the original classification by species! 
+    -  But what if we want to further classify our penguins by sex? Choosing similar colors to our original three can help us to further differentiate between Male and Female penguins while still maintaining the original classification by species! 
     
         {%- highlight python -%} 
         color_gender_plot = ( 
@@ -193,7 +200,7 @@ Colors can make your visuals pop, but too much color can be distracting...
         print(color_gender_plot) 
         {%- endhighlight -%} 
 
-    <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_gender_plot.png" alt="Color by Gender Plot" />
+        <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_gender_plot.png" alt="Color by Gender Plot" />
 
 ---
 

@@ -18,10 +18,11 @@ body {
 		content: "";
 		display: block;
 		width: 100%;
-		height: 10em;
+		//height: 10em;
+		height: 5em;
 		position: absolute;
 		//top: -2em;
-		top: -4em;
+		top: -6em;
 		left: 0;
 		transform: skewY(-2deg);
 		transform-origin: bottom left;
@@ -201,7 +202,8 @@ POST STYLING
 			content: "";
 			display: block;
 			width: 100%;
-			height: 2em;
+			//height: 2em;
+			height: 4em;
 			position: absolute;
 			top: -2em;
 			left: 0;
