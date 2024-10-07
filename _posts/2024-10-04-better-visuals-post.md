@@ -46,7 +46,9 @@ display_image: true
         print(plot) 
 
         {%- endhighlight -%} 
-        <img src="../assets/img/basic_p9.png" alt="Basic Plot" />
+
+    <img src="{{site.url}}/{{site.baseurl}}/assets/img/basic_p9.png" alt="Basic Plot" />
+
     - For more complicated visuals, see the plotnine <a href="https://plotnine.org/reference/" target="_blank"> documentation </a>, or any guide for R's ggplot2
 
 ### Tip 1: Start Simple
@@ -93,7 +95,9 @@ Before diving into plotnine, we need to ensure that our data has been cleaned, w
         plt.ylabel('Bill Depth (mm)') 
         plt.show() 
         {%- endhighlight -%} 
-        <img src="../assets/img/basic_sp.png" alt="Basic Scatter Plot" />
+
+    <img src="{{site.url}}/{{site.baseurl}}/assets/img/basic_sp.png" alt="Basic Scatter Plot" />
+
     - Simple visualizations like these help us to see trends and identify relationships, providing a foundation that we can build off of with plotnine.
 
 ------------------------------------------------------------------------
@@ -110,7 +114,8 @@ Labels can make or break your visual, so putting in a little extra work with the
     -   Clear labeling is crucial for effective communication in data visualizations. Labels provide context, making it easier for viewers to interpret the information presented.
 -   **Customizing Labels in Plotnine**
     -   In plotnine, you can manually adjust labels to improve clarity. Let's start with the following graph. What are we looking at? Who knows! 
-    <img src="../assets/img/unlabeled_plot.png" alt="Unlabeled Plot" />
+
+    <img src="{{site.url}}/{{site.baseurl}}/assets/img/unlabeled_plot.png" alt="Unlabeled Plot" />
 
     -   But add labels and ... voila! We can easily see that we're looking at a bar plot of Penguin Counts on our 3 Islands over time! 
 
@@ -129,7 +134,8 @@ Labels can make or break your visual, so putting in a little extra work with the
     print(labeled_plot)
 
     {%- endhighlight -%}
-    <img src="../assets/img/labeled_plot.png" alt="Labeled Plot" />
+
+    <img src="{{site.url}}/{{site.baseurl}}/assets/img/labeled_plot.png" alt="Labeled Plot" />
 
 ------------------------------------------------------------------------
 
@@ -165,7 +171,7 @@ Colors can make your visuals pop, but too much color can be distracting...
         ) 
         print(color_plot) 
         {%- endhighlight -%}
-        <img src="../assets/img/color_plot.png" alt="Color Plot" />
+        <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_plot.png" alt="Color Plot" />
 
     -   But what if we want to further classify our penguins by sex? Choosing similar colors to our original three can help us to further differentiate between Male and Female penguins while still maintaining the original classification by species! 
     
@@ -186,7 +192,9 @@ Colors can make your visuals pop, but too much color can be distracting...
         ) 
         print(color_gender_plot) 
         {%- endhighlight -%} 
-    <img src="../assets/img/color_gender_plot.png" alt="Color by Gender Plot" />
+
+    <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_gender_plot.png" alt="Color by Gender Plot" />
+
 ---
 
 ### Tip 4: Be Easily Interpretable
@@ -200,7 +208,7 @@ The most important feature of any visual is its interpretability. Visuals exist 
 -   **Emphasizing Clarity and Simplicity**
     -   The principle of "less is more" applies to data visualization. A cluttered visual can confuse rather than inform. Focus on what’s essential. What do the two visuals below have in common? They're both a complete mess! Sure, they present (presumably) meaningful data, however they try and add too many features, taking away all interpretability in the process.
 
-        |<img src="../assets/img/cluttered_visual_1.png" alt="Cluttered Visual 1"/>|<img src="../assets/img/cluttered_visual_2.png" alt="Cluttered Visual 2"/>|
+        |<img src="{{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_1.png" alt="Cluttered Visual 1"/>|<img src="{{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_2.png" alt="Cluttered Visual 2"/>|
         |:--:|:--:|
         | Source: Me | <a href="https://www.elsevier.com/connect" target="_blank"> Source:</a> |
 -   **Strategies for Clean Visuals**
@@ -214,7 +222,9 @@ The most important feature of any visual is its interpretability. Visuals exist 
         print(plot) 
 
         {%- endhighlight -%}
-        <img src="../assets/img/minimal_p9.png" alt="Minimal Theme Plot" />
+
+    <img src="{{site.url}}/{{site.baseurl}}/assets/img/minimal_p9.png" alt="Minimal Theme Plot" />
+
     -   Highlight key insights directly through annotations, emphasis, or the use of color, keeping the overall design clean and focused.
 
 ------------------------------------------------------------------------
