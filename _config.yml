@@ -7,7 +7,7 @@ author: Carter Hale
 author_description: "Hi! My name is Carter and I'm a senior at BYU, where I study Statistics with an emphasis in Data Science and minor in Math. When I'm not staring at a computer wondering why my code isn't working, I enjoy playing volleyball, reading, and judging cooking shows wayyyy too harshly for my skill level!" 
 
 url: https://chale15.github.io
-baseurl: /data-science-blog ## change this to the name of your blog repository
+baseurl: data-science-blog ## change this to the name of your blog repository
 header_image: /assets/img/header_image.png ## change header image if you want
 
 ## Add your social media user names.  Github is required, the rest are optional
