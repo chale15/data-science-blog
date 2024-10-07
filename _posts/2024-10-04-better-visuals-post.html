@@ -477,29 +477,18 @@ interpret the information presented.</li>
 </ul></li>
 <li><strong>Customizing Labels in Plotnine</strong>
 <ul>
-<li>In plotnine, you can manually adjust labels to improve clarity.
+<li><p>In plotnine, you can manually adjust labels to improve clarity.
 Let’s start with the following graph. What are we looking at? Who knows!
-<figure>
-<img role="img" aria-label src="{{site.url}}/{{site.baseurl}}/assets/img/unlabeled_plot" alt>
-</figure></li>
+<img role="img" aria-label="Figure" src="%7B%7Bsite.url%7D%7D/%7B%7Bsite.baseurl%7D%7D/assets/img/unlabeled_plot.png" alt="Figure" /></p></li>
+<li><p>But add labels and … voila! We can easily see that we’re looking
+at a bar plot of Penguin Counts on our 3 Islands over time! {%-
+highlight python -%} labeled_plot = ( ggplot(penguins, aes(x = ‘year’,
+fill = ‘species’)) + geom_bar(aes(y=‘..count..’), position=‘dodge’) +
+labs( x = “Year”, y = “Count”, title = “Annual Penguin Count by Island”
+) + theme(plot_title = element_text(hjust = 0.5)) + facet_wrap(‘island’)
++ scale_fill_manual(values = [“#26648E”,“#ff8c00”,“#53D2DC”]) )
+print(labeled_plot) {%- endhighlight -%}</p></li>
 </ul></li>
-</ul>
-{%- highlight html -%}
-<figure>
-{% raw
-%}<img role="img" aria-label src="{{site.url}}/{{site.baseurl}}/assets/img/unlabeled_plot" alt>{%
-endraw %}
-</figure>
-<p>{%- endhighlight -%}</p>
-<ul>
-<li>But add labels and … voila! We can easily see that we’re looking at
-a bar plot of Penguin Counts on our 3 Islands over time! {%- highlight
-python -%} labeled_plot = ( ggplot(penguins, aes(x = ‘year’, fill =
-‘species’)) + geom_bar(aes(y=‘..count..’), position=‘dodge’) + labs( x =
-“Year”, y = “Count”, title = “Annual Penguin Count by Island” ) +
-theme(plot_title = element_text(hjust = 0.5)) + facet_wrap(‘island’) +
-scale_fill_manual(values = [“#26648E”,“#ff8c00”,“#53D2DC”]) )
-print(labeled_plot) {%- endhighlight -%}</li>
 </ul>
 <hr />
 </div>

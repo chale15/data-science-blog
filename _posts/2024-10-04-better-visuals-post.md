@@ -89,16 +89,7 @@ plt.show()
 
 - **Customizing Labels in Plotnine**
   - In plotnine, you can manually adjust labels to improve clarity. Let's start with the following graph. What are we looking at? Who knows!
-    <figure>
-	<img src="{{site.url}}/{{site.baseurl}}/assets/img/unlabeled_plot" alt=""> 
-</figure>
-
-
-{%- highlight html -%}
-<figure>
-	{% raw %}<img src="{{site.url}}/{{site.baseurl}}/assets/img/unlabeled_plot" alt="">{% endraw %}
-</figure>
-{%- endhighlight -%}
+    ![Figure]({{site.url}}/{{site.baseurl}}/assets/img/unlabeled_plot.png)
 
   - But add labels and ... voila! We can easily see that we're looking at a bar plot of Penguin Counts on our 3 Islands over time!
   {%- highlight python -%}
@@ -178,7 +169,7 @@ print(color_gender_plot)
   - The principle of "less is more" applies to data visualization. A cluttered visual can confuse rather than inform. Focus on what’s essential.
     What do the two visuals below have in common? They're both a complete mess! Sure, they present (presumably) meaningful data, however they try and add too many features, taking away all interpretability in the process.
     
-    |![Visual1]({{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_1)|![Visual2]({{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_2)|
+    |![Visual1]({{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_1.png)|![Visual2]({{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_2.png)|
     |:-:|:-:|
     |Source: Me|<a href="https://www.elsevier.com/connect" target="_blank"> Source:</a>|
 - **Strategies for Clean Visuals**
