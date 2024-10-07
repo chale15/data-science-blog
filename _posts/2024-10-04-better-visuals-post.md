@@ -3,14 +3,13 @@ layout: post
 title:  "Data Visualization Made Easy!"
 date: 2024-10-04
 description: 5 Tips and Tricks to make your visuals stand out above the rest   
-image: "/assets/img/header_image.png"
+image: "/assets/img/favicon.ico"
 display_image: true
 ---
 
 ## 5 Tips and Tricks to Make Your Visuals Stand Out Above the Rest
 
-<p class="intro">
-[T]{.dropcap}ake your visuals from "meh" to "magnificent" using the 'Plotnine' Python library.</p>
+<p class="intro"><span class="dropcap">T</span>ake your visuals from "meh" to "magnificent" using the 'Plotnine' Python library.</p>
 
 ### Introduction
 
@@ -47,6 +46,7 @@ display_image: true
         print(plot) 
 
         {%- endhighlight -%} 
+        <img src="../assets/img/basic_p9.png" alt="Basic Plot" />
     - For more complicated visuals, see the plotnine <a href="https://plotnine.org/reference/" target="_blank"> documentation </a>, or any guide for R's ggplot2
 
 ### Tip 1: Start Simple
@@ -93,6 +93,7 @@ Before diving into plotnine, we need to ensure that our data has been cleaned, w
         plt.ylabel('Bill Depth (mm)') 
         plt.show() 
         {%- endhighlight -%} 
+        <img src="../assets/img/basic_sp.png" alt="Basic Scatter Plot" />
     - Simple visualizations like these help us to see trends and identify relationships, providing a foundation that we can build off of with plotnine.
 
 ------------------------------------------------------------------------
@@ -209,10 +210,11 @@ The most important feature of any visual is its interpretability. Visuals exist 
 
         plot = (ggplot(df, aes(x='x', y='y')) + 
                 geom_point() + 
-                theme_minimal()) \# Simplified theme 
+                theme_minimal()) # Simplified theme 
         print(plot) 
 
         {%- endhighlight -%}
+        <img src="../assets/img/minimal_p9.png" alt="Minimal Theme Plot" />
     -   Highlight key insights directly through annotations, emphasis, or the use of color, keeping the overall design clean and focused.
 
 ------------------------------------------------------------------------
