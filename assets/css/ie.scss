@@ -3,7 +3,19 @@
 
 .lt-ie9.js {
 	.logo {
-		padding-left: 20px;
+		//padding-left: 20px;
+		body {
+            display: flex;
+            justify-content: center; /* Centers horizontally */
+            align-items: flex-start; /* Aligns items at the top */
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+        }
+        margin-top: 50px; /* Adjust this value to shift it down */
+        img {
+            width: 250px; /* Adjust size as needed */
+            height: 250px; /* Adjust size as needed */
+        }
 	}
 
 	.nav-collapse {
