@@ -96,13 +96,13 @@ HEADER STYLING
 				border: none;
 
 				a {
-					color: white;
+					color: black;
 					font-size: .9em;
 					text-decoration: none;
 					padding: 0 .25em;
 
 					&:hover {
-						color: darken(white, 20%);
+						color: lighten(black, 20%);
 					}
 				}
 
