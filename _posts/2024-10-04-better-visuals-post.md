@@ -4,7 +4,7 @@ title:  "Data Visualization Made Easy!"
 date: 2024-10-04
 description: 5 Tips and Tricks to make your visuals stand out above the rest   
 image: "/assets/img/favicon.ico"
-display_image: true
+display_image: false
 ---
 
 <p class="intro"><span class="dropcap">T</span>ake your visuals from "meh" to "magnificent" using the 'Plotnine' Python library.</p>
