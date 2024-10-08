@@ -7,8 +7,6 @@ image: "/assets/img/favicon.ico"
 display_image: true
 ---
 
-## 5 Tips and Tricks to Make Your Visuals Stand Out Above the Rest
-
 <p class="intro"><span class="dropcap">T</span>ake your visuals from "meh" to "magnificent" using the 'Plotnine' Python library.</p>
 
 ### Introduction
@@ -51,7 +49,7 @@ display_image: true
 
         <img src="{{site.url}}/{{site.baseurl}}/assets/img/basic_p9.png" alt="Basic Plot" />
 
-    - For more complicated visuals, see the plotnine <a href="https://plotnine.org/reference/" target="_blank"> documentation </a>, or any guide for R's ggplot2
+For more complicated visuals, see the plotnine <a href="https://plotnine.org/reference/" target="_blank"> documentation </a>, or any guide for R's ggplot2
 
 ### Tip 1: Start Simple
 
