@@ -49,7 +49,9 @@ display_image: true
 
         <img src="{{site.url}}/{{site.baseurl}}/assets/img/basic_p9.png" alt="Basic Plot" />
 
-For more complicated visuals, see the plotnine <a href="https://plotnine.org/reference/" target="_blank"> documentation </a>, or any guide for R's ggplot2
+For more complicated visuals, see the plotnine <a href="https://plotnine.org/reference/" target="_blank"> documentation </a>, 
+or any guide for R's ggplot2
+------------------------------------------------------------------------
 
 ### Tip 1: Start Simple
 
@@ -214,7 +216,6 @@ The most important feature of any visual is its interpretability. Visuals exist 
     -   The principle of "less is more" applies to data visualization. A cluttered visual can confuse rather than inform. Focus on what’s essential. What do the two visuals below have in common? They're both a complete mess! Sure, they present (presumably) meaningful data, however they try and add too many features, taking away all interpretability in the process.
 
         |<img src="{{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_1.png" alt="Cluttered Visual 1"/>|<img src="{{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_2.png" alt="Cluttered Visual 2"/>|
-        |:--:|:--:|
         | Source: Me | <a href="https://www.elsevier.com/connect" target="_blank"> Source:</a> |
 -   **Strategies for Clean Visuals**
     -   Simplify your visuals by removing unnecessary elements, such as excessive gridlines or decorative features that don’t add value. For example, using themes: 
