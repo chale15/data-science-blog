@@ -51,6 +51,7 @@ display_image: true
 
 For more complicated visuals, see the plotnine <a href="https://plotnine.org/reference/" target="_blank"> documentation </a>, 
 or any guide for R's ggplot2
+
 ------------------------------------------------------------------------
 
 ### Tip 1: Start Simple
