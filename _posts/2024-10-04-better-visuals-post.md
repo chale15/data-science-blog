@@ -3,7 +3,7 @@ layout: post
 title:  "Data Visualization Made Easy!"
 date: 2024-10-04
 description: 5 Tips and Tricks to make your visuals stand out above the rest   
-image: ""
+image: 
 display_image: false
 ---
 

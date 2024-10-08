@@ -1,6 +1,6 @@
 
 <div class="header {% if site.header == 'large' %}header--large{% endif %}" style="background-image: url('{% if page.image and page.display_image %}{{ site.header_image | absolute_url }}{% elsif page.image %}{{ page.image | absolute_url }}{% else %}{{ site.header_image | absolute_url }}{% endif %}');">
-    <div class="container" style="text-align: center; padding-top: 100px;">
+    <div class="container" style="text-align: center; padding-top: 50px;">
         <nav class="nav-collapse">
             <ul class="noList">
                 {%- for link in site.navigation -%}{%- assign current = nil -%}{%- if page.url contains link.url or forloop.first and page.url == '/' or page.url == 'index.html' -%}{%- assign current = 'current' -%}{%- endif -%}
