@@ -3,7 +3,7 @@ layout: default
 title: About 
 ---
 
-## About this Blog
+//## About this Blog
 
 {{site.description}}
 
