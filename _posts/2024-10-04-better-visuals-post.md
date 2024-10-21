@@ -219,7 +219,7 @@ The most important feature of any visual is its interpretability. Visuals exist 
 
 |<img src="{{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_1.png" alt="Cluttered Visual 1" style="width:400px"/>|<img src="{{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_2.png" alt="Cluttered Visual 2" style="width:400px"/>|
 
--    <a href="https://www.elsevier.com/connect" target="_blank"> Image 2 Source</a> 
+<a href="https://www.elsevier.com/connect" target="_blank"> Image 2 Source</a> 
         
 -   **Strategies for Clean Visuals**
     -   Simplify your visuals by removing unnecessary elements, such as excessive gridlines or decorative features that don’t add value. For example, using themes: 
@@ -235,7 +235,7 @@ The most important feature of any visual is its interpretability. Visuals exist 
 
       <img src="{{site.url}}/{{site.baseurl}}/assets/img/minimal_p9.png" alt="Minimal Theme Plot" />
 
-    -  Highlight key insights directly through annotations, emphasis, or the use of color, keeping the overall design clean and focused.
+    -Highlight key insights directly through annotations, emphasis, or the use of color, keeping the overall design clean and focused.
 
 ------------------------------------------------------------------------
 
