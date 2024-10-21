@@ -179,11 +179,12 @@ Colors can make your visuals pop, but too much color can be distracting...
         ) 
         print(color_plot) 
         {%- endhighlight -%}
-    - <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_plot.png" alt="Color Plot" />
+
+        <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_plot.png" alt="Color Plot" />
 
     -   But what if we want to further classify our penguins by sex? Choosing similar colors to our original three can help us to further differentiate between Male and Female penguins while still maintaining the original classification by species! 
     
-     - {%- highlight python -%} 
+     -  {%- highlight python -%} 
         color_gender_plot = ( 
             ggplot(penguins, aes(
                 x = 'bill_depth_mm', 
@@ -243,7 +244,7 @@ The most important feature of any visual is its interpretability. Visuals exist 
 -   **Experiment!**
     -   Every dataset is unique, and what worked for one visualization might not work well with another. By experimenting with different visual styles and parameters, you can ensure that your visual best suits the data, and highlights the desired information.
 -   **Fine-tune Parameters!**
-    -   Adjust aspects like point outlines, text sizes, line widths, and shapes to best fit your data. The possibilities are endless! 
+    -   Adjust aspects like point outlines, text sizes, line widths, and shapes (syntax shown below) to best fit your data. The possibilities are endless! 
 
         {%- highlight python -%} 
         plot = (ggplot(df, aes(x='x', y='y')) + 
