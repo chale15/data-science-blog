@@ -242,7 +242,7 @@ The most important feature of any visual is its interpretability. Visuals exist 
 -   **Experiment!**
     -   Every dataset is unique, and what worked for one visualization might not work well with another. By experimenting with different visual styles and parameters, you can ensure that your visual best suits the data, and highlights the desired information.
 -   **Fine-tune Parameters!**
-    -   Adjust aspects like point outlines, text sizes, line widths, and shapes to best fit your data. The possibilities are endless! 
+    -   Adjust aspects like point outlines, text sizes, line widths, and shapes (syntax shown below) to best fit your data. The possibilities are endless! 
 
         {%- highlight python -%} 
         plot = (ggplot(df, aes(x='x', y='y')) + 
