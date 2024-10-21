@@ -102,7 +102,7 @@ Before diving into plotnine, we need to ensure that our data has been cleaned, w
 
         <img src="{{site.url}}/{{site.baseurl}}/assets/img/basic_sp.png" alt="Basic Scatter Plot" />
 
-    - Simple visualizations like these help us to see trends and identify relationships, providing a foundation that we can build off of with plotnine.
+    -Simple visualizations like these help us to see trends and identify relationships, providing a foundation that we can build off of with plotnine.
 
 ------------------------------------------------------------------------
 
@@ -182,9 +182,9 @@ Colors can make your visuals pop, but too much color can be distracting...
 
     <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_plot.png" alt="Color Plot" />
 
-    -   But what if we want to further classify our penguins by sex? Choosing similar colors to our original three can help us to further differentiate between Male and Female penguins while still maintaining the original classification by species! 
+- But what if we want to further classify our penguins by sex? Choosing similar colors to our original three can help us to further differentiate between Male and Female penguins while still maintaining the original classification by species! 
     
-    -  {%- highlight python -%} 
+    {%- highlight python -%} 
         color_gender_plot = ( 
             ggplot(penguins, aes(
                 x = 'bill_depth_mm', 
@@ -202,7 +202,7 @@ Colors can make your visuals pop, but too much color can be distracting...
         print(color_gender_plot) 
         {%- endhighlight -%} 
 
-        <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_gender_plot.png" alt="Color by Gender Plot" />
+    <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_gender_plot.png" alt="Color by Gender Plot" />
 
 ---
 
@@ -235,7 +235,7 @@ The most important feature of any visual is its interpretability. Visuals exist 
 
       <img src="{{site.url}}/{{site.baseurl}}/assets/img/minimal_p9.png" alt="Minimal Theme Plot" />
 
-    - Highlight key insights directly through annotations, emphasis, or the use of color, keeping the overall design clean and focused.
+    -  Highlight key insights directly through annotations, emphasis, or the use of color, keeping the overall design clean and focused.
 
 ------------------------------------------------------------------------
 
