@@ -100,7 +100,7 @@ Before diving into plotnine, we need to ensure that our data has been cleaned, w
         plt.show() 
         {%- endhighlight -%} 
 
-        <img src="{{site.url}}/{{site.baseurl}}/assets/img/basic_sp.png" alt="Basic Scatter Plot" />
+    - <img src="{{site.url}}/{{site.baseurl}}/assets/img/basic_sp.png" alt="Basic Scatter Plot" />
 
     - Simple visualizations like these help us to see trends and identify relationships, providing a foundation that we can build off of with plotnine.
 
@@ -179,9 +179,9 @@ Colors can make your visuals pop, but too much color can be distracting...
         ) 
         print(color_plot) 
         {%- endhighlight -%}
-        <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_plot.png" alt="Color Plot" />
+    - <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_plot.png" alt="Color Plot" />
 
-    -  But what if we want to further classify our penguins by sex? Choosing similar colors to our original three can help us to further differentiate between Male and Female penguins while still maintaining the original classification by species! 
+    -   But what if we want to further classify our penguins by sex? Choosing similar colors to our original three can help us to further differentiate between Male and Female penguins while still maintaining the original classification by species! 
     
      - {%- highlight python -%} 
         color_gender_plot = ( 
@@ -218,7 +218,7 @@ The most important feature of any visual is its interpretability. Visuals exist 
 
 |<img src="{{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_1.png" alt="Cluttered Visual 1" style="width:400px"/>|<img src="{{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_2.png" alt="Cluttered Visual 2" style="width:400px"/>|
 
-<a href="https://www.elsevier.com/connect" target="_blank"> Image 2 Source</a> 
+-    <a href="https://www.elsevier.com/connect" target="_blank"> Image 2 Source</a> 
         
 -   **Strategies for Clean Visuals**
     -   Simplify your visuals by removing unnecessary elements, such as excessive gridlines or decorative features that don’t add value. For example, using themes: 
@@ -232,9 +232,9 @@ The most important feature of any visual is its interpretability. Visuals exist 
 
         {%- endhighlight -%}
 
-    - <img src="{{site.url}}/{{site.baseurl}}/assets/img/minimal_p9.png" alt="Minimal Theme Plot" />
+    -   <img src="{{site.url}}/{{site.baseurl}}/assets/img/minimal_p9.png" alt="Minimal Theme Plot" />
 
-    -  Highlight key insights directly through annotations, emphasis, or the use of color, keeping the overall design clean and focused.
+    - Highlight key insights directly through annotations, emphasis, or the use of color, keeping the overall design clean and focused.
 
 ------------------------------------------------------------------------
 
