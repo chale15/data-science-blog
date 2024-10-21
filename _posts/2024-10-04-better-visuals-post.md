@@ -216,9 +216,9 @@ The most important feature of any visual is its interpretability. Visuals exist 
 -   **Emphasizing Clarity and Simplicity**
     -   The principle of "less is more" applies to data visualization. A cluttered visual can confuse rather than inform. Focus on what’s essential. What do the two visuals below have in common? They're both a complete mess! Sure, they present (presumably) meaningful data, however they try and add too many features, taking away all interpretability in the process.
 
-        <img src="{{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_1.png" alt="Cluttered Visual 1" style="width:400px"/><img src="{{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_2.png" alt="Cluttered Visual 2" style="width:400px"/>
+|<img src="{{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_1.png" alt="Cluttered Visual 1" style="width:400px"/>|<img src="{{site.url}}/{{site.baseurl}}/assets/img/cluttered_visual_2.png" alt="Cluttered Visual 2" style="width:400px"/>|
 
-        -<a href="https://www.elsevier.com/connect" target="_blank"> Image 2 Source</a> 
+<a href="https://www.elsevier.com/connect" target="_blank"> Image 2 Source</a> 
         
 -   **Strategies for Clean Visuals**
     -   Simplify your visuals by removing unnecessary elements, such as excessive gridlines or decorative features that don’t add value. For example, using themes: 
