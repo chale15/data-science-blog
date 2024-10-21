@@ -102,9 +102,8 @@ Before diving into plotnine, we need to ensure that our data has been cleaned, w
 
         <img src="{{site.url}}/{{site.baseurl}}/assets/img/basic_sp.png" alt="Basic Scatter Plot" />
 
-    <p class="tip-description">
-
-    Simple visualizations like these help us to see trends and identify relationships, providing a foundation that we can build off of with plotnine.
+<p class="tip-description">
+Simple visualizations like these help us to see trends and identify relationships, providing a foundation that we can build off of with plotnine.
 
 ------------------------------------------------------------------------
 
@@ -237,7 +236,7 @@ The most important feature of any visual is its interpretability. Visuals exist 
 
       <img src="{{site.url}}/{{site.baseurl}}/assets/img/minimal_p9.png" alt="Minimal Theme Plot" />
 
-    <p class="tip-description">
+<p class="tip-description">
     Highlight key insights directly through annotations, emphasis, or the use of color, keeping the overall design clean and focused.
 
 ------------------------------------------------------------------------
