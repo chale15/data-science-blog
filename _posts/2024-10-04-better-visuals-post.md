@@ -181,6 +181,7 @@ Colors can make your visuals pop, but too much color can be distracting...
         {%- endhighlight -%}
         <img src="{{site.url}}/{{site.baseurl}}/assets/img/color_plot.png" alt="Color Plot" />
 
+
     -  But what if we want to further classify our penguins by sex? Choosing similar colors to our original three can help us to further differentiate between Male and Female penguins while still maintaining the original classification by species! 
     
         {%- highlight python -%} 
