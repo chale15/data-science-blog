@@ -129,7 +129,6 @@ except:
 
 for player in all_qbs:
     stats = player.find_elements(By.XPATH, "./td")
-    #years1.append(2024-i)
     qbs.append(stats[0].text.strip())
     names1.append(stats[0].text.strip())
     qb_yards.append(stats[1].text.strip())
@@ -225,7 +224,7 @@ After all of our loops have finished running, all that's left to do is to quit S
 
 And there we have it! A successfully scraped quarterback stats dataset!
 
-(As previously mentioned, the process for scraping wide reciever data is nearly identical, and is included in the <a href="https://github.com/chale15/NFL_Data/blob/main/nfl_data.ipynb" target="_blank">'nfl_data.ipynb'</a> file on GitHub)
+(As previously mentioned, the process for scraping wide reciever data is nearly identical, and is included in the '<a href="https://github.com/chale15/NFL_Data/blob/main/nfl_data.ipynb" target="_blank">nfl_data.ipynb</a>' file on GitHub)
 
 ---
 
@@ -275,7 +274,7 @@ Summary statistics can only get us so far, so lets look at some visuals.
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/top_players_tds.png" alt="Top Players (Touchdowns)" />
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/img/pats_stats_time.png" alt="Patriots Stats by Season" />
+<img src="{{site.url}}/{{site.baseurl}}/assets/img/hill_stats_time.png" alt="Tyreek Hill Stats by Season" />
 
 
 ---
