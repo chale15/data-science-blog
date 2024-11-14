@@ -72,7 +72,7 @@ Well, we've officially made it to the hardest part of the whole process: getting
   </a>
 </div>
 \
-\
+
 
 We also have to figure out which package will be the best for our purposes. The two major packages for web scraping in Python are *Beautiful Soup* and *Selenium*. Beautiful Soup is a much more lightweight, easy to use package, making it ideal for simpler web scraping tasks, although it is more limited in scope and features than Selenium. Beautiful Soup works in tandem with the Requests package, allowing you to collect the entirety of a website as text in JSON or HTML form, and from there, filter down that text object within your coding environment to obtain the information you want without having to interact further with the website. Generally speaking, you want to use Beautiful Soup and Requests to obtain data as often as you possible. A good rule of thumb is if there's nothing that forces you to use Selenium, use Beautiful Soup. 
 
@@ -80,7 +80,7 @@ Selenium, on the other hand, is much more powerful, much less intuitive, and muc
 
 For further reading on these libraries, check out the guides below:
 
-<a href="https://realpython.com/python-requests/" target="_blank">Requests</a>'     '<a href="https://realpython.com/beautiful-soup-web-scraper-python/" target="_blank">BeautifulSoup</a>'     '<a href="https://www.simplilearn.com/tutorials/python-tutorial/selenium-with-python" target="_blank">Selenium</a>
+<a href="https://realpython.com/python-requests/" target="_blank">Requests</a>\t<a href="https://realpython.com/beautiful-soup-web-scraper-python/" target="_blank">BeautifulSoup</a>\t<a href="https://www.simplilearn.com/tutorials/python-tutorial/selenium-with-python" target="_blank">Selenium</a>
 
 
 For our data, there's some good news and bad news. The bad news is that interacting with the website as we scrape will make our lives considerably easier, so we have to use Selenium. The good news is that we don't need Selenium for everything, so we get to use a mix of the two packages to collect our data! Let's jump into the code!
