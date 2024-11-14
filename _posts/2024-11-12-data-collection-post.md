@@ -40,6 +40,7 @@ In order to scrape data, you first have to find it. Fortunately I didn't have to
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/nfl_home_page.png" alt="NFL Home Page" />
 
 As you can see, this page has a lot going on, but with the inspect element tool, I was able to find the information I needed buried within HTML tags and divisions. For an introduction to HTML and inspect element, check out this <a href="https://www.youtube.com/watch?v=TUpsyv9A9vU" target="_blank">video!</a>
+
 ---
 
 ### Should You Use Your Data?
@@ -54,7 +55,7 @@ Fortunately for us, the NFL gives us almost universal access to scrape, as seen 
 
 Now that we've determined that we **should** use this data, we need to figure out **how** to obtain it. 
 
-------------------------------------------------------------------------
+---
 
 ### Choosing the Right Tool
 
@@ -154,7 +155,6 @@ Once it has found the table, it locates rows which represent individual players,
 Our table only shows 25 players at a time, which is why we have to use Selenium. After scraping data from the first 25 rows, our browser clicks a button to move to the next page of results. This process repeats until there are no more buttons to push, and we know that we've scraped the entire table. 
 
 
-
 #### 4. Scrape Data with Beautiful Soup
 
 ```python 
@@ -227,11 +227,13 @@ And there we have it! A successfully scraped quarterback stats dataset!
 
 (As previously mentioned, the process for scraping wide reciever data is nearly identical, and is included in the <a href="https://github.com/chale15/NFL_Data/blob/main/nfl_data.ipynb" target="_blank">'nfl_data.ipynb'</a> file on GitHub)
 
-------------------------------------------------------------------------
+---
 
 ### EDA (Exploratory Data Analysis)
 
 Now that the hard part is done let's take a look at our datasets
+
+#### 1. Overview
 
 First, the Quarterback data:
 
@@ -249,6 +251,7 @@ And the Recievers:
 | wr_full.csv  | 1444              | 9             | 7                          |
 
 
+#### 2. Summary Statistics
 
 The 'pd.describe()' function shows summary statistics, let's dive a little deeper into some of our more important features in the Reciever data. 
 
@@ -260,6 +263,7 @@ We can even break this down further, and compare statistics by season.
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/wr_df_years.png" alt="Reciever DataFrame Years" />
 
+#### 3. Visualization
 
 Summary statistics can only get us so far, so lets look at some visuals. 
 
@@ -274,7 +278,7 @@ Summary statistics can only get us so far, so lets look at some visuals.
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/pats_stats_time.png" alt="Patriots Stats by Season" />
 
 
-------------------------------------------------------------------------
+---
 
 ### Conclusion
 
@@ -284,4 +288,4 @@ And even though the process seems technical at first, it becomes manageable with
 
 Now that you've mastered the basics, it's time to dive in and start scraping your own data! Don't forget to check out the GitHub repository for the full code and data, and leave a comment to show me the data you scraped!
 
-------------------------------------------------------------------------
+---
