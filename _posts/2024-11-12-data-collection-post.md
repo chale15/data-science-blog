@@ -31,7 +31,6 @@ In American Football, does a Quarterbacks' ability to run with the ball negative
 </p>
 
 Before we dive into the question at hand, I'll preface that this article _will_ include football terms, and a basic understanding of the sport will likely come in handy. I've attached a quick guide below. 
-
 <a href="https://usasports.co.uk/blogs/blog/a-beginners-guide-to-american-football-and-the-nfl?srsltid=AfmBOopndDwlgsvt01xaVEIIp0gPuECjvfRV_hSA737oPLnDQ9wtoX0i" target="_blank">Guide</a>
 
 Anyways, as I was watching football one evening, and lamenting the decline of the once-great Patriots dynasty, the announcer made an interesting comment about how the performance of one of the top recievers in the NFL had suffered on a new team because of his mobile quarterback. Looking past the logical fallacy of correlation equalling causation, I decided to collect my own data to either confirm or deny the announcer's opinion. 
@@ -64,7 +63,7 @@ The only thing that affects us is the very last line, which prohibits users from
 
 Well, we've officially made it to the hardest part of the whole process: getting our data into a form we can use. I'll be using a Jupyter Notebook to work through the process, and you can access my code and final results at the github link below. 
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+<div style="display: flex; justify-content: center; align-items: center;">
   <a href="https://github.com/chale15/NFL_Data/" style="text-decoration:none;">
     <button style="background-color:#2dba4e; color:white; padding:10px 20px; border:none; border-radius:5px; font-size:16px;">
       GitHub Repository
@@ -80,7 +79,7 @@ Selenium, on the other hand, is much more powerful, much less intuitive, and muc
 
 For further reading on these libraries, check out the guides below:
 
-<a href="https://realpython.com/python-requests/" target="_blank">Requests</a>      <a href="https://realpython.com/beautiful-soup-web-scraper-python/" target="_blank">BeautifulSoup</a>       <a href="https://www.simplilearn.com/tutorials/python-tutorial/selenium-with-python" target="_blank">Selenium</a>
+<a href="https://realpython.com/python-requests/" target="_blank">Requests</a>'     |     '<a href="https://realpython.com/beautiful-soup-web-scraper-python/" target="_blank">BeautifulSoup</a>'     |     '<a href="https://www.simplilearn.com/tutorials/python-tutorial/selenium-with-python" target="_blank">Selenium</a>
 
 
 For our data, there's some good news and bad news. The bad news is that interacting with the website as we scrape will make our lives considerably easier, so we have to use Selenium. The good news is that we don't need Selenium for everything, so we get to use a mix of the two packages to collect our data! Let's jump into the code!
@@ -122,14 +121,14 @@ I wanted to collect data spanning several years, so all of my code is nestled wi
 #### Initialize Selenium
 
 {%- highlight python -%} 
-        try:
-        driver.quit()
-    except:
-        print("No Driver")
+    try:
+    driver.quit()
+except:
+    print("No Driver")
 
-    link = 'https://www.nfl.com/stats/player-stats/category/passing/' +str(2024 - i) +'/reg/all/passingyards/desc'
-    driver = webdriver.Safari(service=SafariService())
-    driver.get(link) 
+link = 'https://www.nfl.com/stats/player-stats/category/passing/' +str(2024 - i) +'/reg/all/passingyards/desc'
+driver = webdriver.Safari(service=SafariService())
+driver.get(link) 
 {%- endhighlight -%}
 
 While simple, these few lines of code are among the most important, because this is where I initialize Selenium. Once these lines have been run the automated browser is active, and will interact with your website however you tell it to. From here, my code tells the automated browser to search through the HTML until it finds what we want. In this case, we want the table with all the Quarterback information on it. 
@@ -139,33 +138,33 @@ While simple, these few lines of code are among the most important, because this
 
 {%- highlight python -%} 
     while True:
-        try:
-            container = driver.find_element(By.CLASS_NAME, 'nfl-c-player-directory')
-            all_qbs = container.find_elements(By.XPATH, ".//tbody/tr")
-        except:
-            break
+    try:
+        container = driver.find_element(By.CLASS_NAME, 'nfl-c-player-directory')
+        all_qbs = container.find_elements(By.XPATH, ".//tbody/tr")
+    except:
+        break
 
-        for player in all_qbs:
-            stats = player.find_elements(By.XPATH, "./td")
-            #years1.append(2024-i)
-            qbs.append(stats[0].text.strip())
-            names1.append(stats[0].text.strip())
-            qb_yards.append(stats[1].text.strip())
-            qb_att.append(stats[3].text.strip())
-            qb_ypa.append(stats[2].text.strip())
-            qb_cmp.append(stats[4].text.strip())
-            qb_td.append(stats[6].text.strip())
-            qb_int.append(stats[7].text.strip())
-            qb_rate.append(stats[8].text.strip())
-            qb_sack.append(stats[14].text.strip())
+    for player in all_qbs:
+        stats = player.find_elements(By.XPATH, "./td")
+        #years1.append(2024-i)
+        qbs.append(stats[0].text.strip())
+        names1.append(stats[0].text.strip())
+        qb_yards.append(stats[1].text.strip())
+        qb_att.append(stats[3].text.strip())
+        qb_ypa.append(stats[2].text.strip())
+        qb_cmp.append(stats[4].text.strip())
+        qb_td.append(stats[6].text.strip())
+        qb_int.append(stats[7].text.strip())
+        qb_rate.append(stats[8].text.strip())
+        qb_sack.append(stats[14].text.strip())
 
-        try:
-            next_button = container.find_element(By.XPATH, './/a[@class="nfl-o-table-pagination__next"]')
-            next_button.click()
-            time.sleep(2)
+    try:
+        next_button = container.find_element(By.XPATH, './/a[@class="nfl-o-table-pagination__next"]')
+        next_button.click()
+        time.sleep(2)
 
-        except:
-            break 
+    except:
+        break 
 {%- endhighlight -%}
 
 Once it has found the table, it locates the individual rows, each of which represent a different player, and adds that player's data for each of the key stats into a list. Essentially, we're building the columns of our dataframe simultaneously. Once we have all the information we want, we'll combine them into one big dataset, but we're not there yet. 
@@ -179,24 +178,24 @@ Now that we've gotten everything we want from this main table, we need to get so
 
 {%- highlight python -%} 
     for qb in qbs:
-        qb_name = re.sub('[^a-zA-Z]+','-', qb)
-        url = 'https://www.nfl.com/players/' + qb_name + '/stats/career'
-        #print(url.replace('-/','/'))
-        r = requests.get(url.replace('-/','/'))
-        bs = BeautifulSoup(r.text)
-        try:
-            rush = bs.find_all('div', {'class':'nfl-o-roster'})[1].find('tbody').find_all('tr')
-            stats = yearMatch(str(2024-i), rush)
-        except:
-            continue
-        names.append(qb)
-        years.append(stats[0].text.strip())
-        teams.append(stats[1].text.strip())
-        games.append(stats[2].text.strip())
-        r_atts.append(stats[3].text.strip())
-        r_yds.append(stats[4].text.strip())
-        ypc.append(stats[5].text.strip())
-        r_tds.append(stats[7].text.strip())
+    qb_name = re.sub('[^a-zA-Z]+','-', qb)
+    url = 'https://www.nfl.com/players/' + qb_name + '/stats/career'
+    #print(url.replace('-/','/'))
+    r = requests.get(url.replace('-/','/'))
+    bs = BeautifulSoup(r.text)
+    try:
+        rush = bs.find_all('div', {'class':'nfl-o-roster'})[1].find('tbody').find_all('tr')
+        stats = yearMatch(str(2024-i), rush)
+    except:
+        continue
+    names.append(qb)
+    years.append(stats[0].text.strip())
+    teams.append(stats[1].text.strip())
+    games.append(stats[2].text.strip())
+    r_atts.append(stats[3].text.strip())
+    r_yds.append(stats[4].text.strip())
+    ypc.append(stats[5].text.strip())
+    r_tds.append(stats[7].text.strip())
 {%- endhighlight -%}
 
 For each player in our original list of names, we send a request to their personal information page and use Beautiful soup to extract the information we want, in this case their team, the number of games they played, and their rushing statistics.
@@ -207,31 +206,31 @@ Once we have everything we want, we save it away, wipe the lists we're using as 
 #### Compile Dataset
 
 {%- highlight python -%} 
-        i += 1
+    i += 1
 
-    pass_df = pd.DataFrame({'QB':names1, 'YDS':qb_yards, 'ATT':qb_att, 'YPA':qb_ypa, 'CMP':qb_cmp, 'TDs':qb_td, 'INTs':qb_int, 'QBR':qb_rate, 'SCK':qb_sack})
-    rush_df = pd.DataFrame({'QB':names, 'Team':teams, 'GP':games, 'Year':years, 'ATT(R)':r_atts, 'YDS(R)':r_yds, 'YPC':ypc, 'TDs(R)':r_tds})
-    qb_df = pd.merge(rush_df, pass_df, on='QB')
-    df = pd.concat([df, qb_df], ignore_index=True)
+pass_df = pd.DataFrame({'QB':names1, 'YDS':qb_yards, 'ATT':qb_att, 'YPA':qb_ypa, 'CMP':qb_cmp, 'TDs':qb_td, 'INTs':qb_int, 'QBR':qb_rate, 'SCK':qb_sack})
+rush_df = pd.DataFrame({'QB':names, 'Team':teams, 'GP':games, 'Year':years, 'ATT(R)':r_atts, 'YDS(R)':r_yds, 'YPC':ypc, 'TDs(R)':r_tds})
+qb_df = pd.merge(rush_df, pass_df, on='QB')
+df = pd.concat([df, qb_df], ignore_index=True)
 
-    names1 = []
-    names = []
-    teams = []
-    games = []
-    years = []
-    r_atts = []
-    r_yds = []
-    ypc = []
-    r_tds = []
-    qbs = []
-    qb_yards = []
-    qb_att = []
-    qb_ypa = []
-    qb_cmp = []
-    qb_td = []
-    qb_int = []
-    qb_rate = []
-    qb_sack = []
+names1 = []
+names = []
+teams = []
+games = []
+years = []
+r_atts = []
+r_yds = []
+ypc = []
+r_tds = []
+qbs = []
+qb_yards = []
+qb_att = []
+qb_ypa = []
+qb_cmp = []
+qb_td = []
+qb_int = []
+qb_rate = []
+qb_sack = []
 {%- endhighlight -%}
 
 After all of our loops have finished running, all that's left to do is to quit Selenium, fix a quick error, and write our data to a csv file. Because of how I created my code, some data ends up duplicating. Normally, this would mean I would have to completely rewrite my code, and approach this task a different way. Since web scraping is (mostly) all about the result and not about the product, however, a simple pd.drop_duplicates function gets us our desired final dataset with considerably less stress. Is it good coding practice? Maybe not, but it works for us!
@@ -239,9 +238,9 @@ After all of our loops have finished running, all that's left to do is to quit S
 
 #### Save Dataset
 {%- highlight python -%} 
-        driver.quit()
-    df = df.drop_duplicates(ignore_index=True)
-    df.to_csv('./qb_data.csv')
+    driver.quit()
+df = df.drop_duplicates(ignore_index=True)
+df.to_csv('./qb_data.csv')
 {%- endhighlight -%}
 
 And there we have it! A successfully scraped quarterback stats dataset!
