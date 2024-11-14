@@ -260,7 +260,7 @@ This function helps us get a feel of the distribution of our quantitative variab
 
 We can even break this down further, and compare statistics by season. 
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/img/wr_df_years.png" alt="Reciever DataFrame Years" />
+<img src="{{site.url}}/{{site.baseurl}}/assets/img/wr_df_describe_years.png" alt="Reciever DataFrame Years" />
 
 #### 3. Visualization
 
