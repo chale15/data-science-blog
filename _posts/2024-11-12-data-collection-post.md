@@ -2,14 +2,14 @@
 layout: post
 title:  "Diving into Data Collection"
 date: 2024-11-12
-description: Turn the Internet Into Your Personal Dataset with Web Scraping!  
+description: Turn the internet into YOUR personal dataset with Web Scraping!  
 image: 
 display_image: false
 ---
 
 <p class="intro"><span class="dropcap">L</span>earn how to access any data you want with two easy to use Python Packages.</p>
 
-## Introduction
+### Introduction
 
 <p class="tip-description">What is Web Scraping, and why do we use it?
 </p>
@@ -22,7 +22,7 @@ Throughout this post, I'll take you with me through a question I had, and introd
 
 ------------------------------------------------------------------------
 
-## Motivating Question
+### Motivating Question
 
 <p class="tip-description">
 
@@ -31,13 +31,14 @@ In American Football, does a Quarterbacks' ability to run with the ball negative
 </p>
 
 Before we dive into the question at hand, I'll preface that this article _will_ include football terms, and a basic understanding of the sport will likely come in handy. I've attached a quick guide below. 
+
 <a href="https://usasports.co.uk/blogs/blog/a-beginners-guide-to-american-football-and-the-nfl?srsltid=AfmBOopndDwlgsvt01xaVEIIp0gPuECjvfRV_hSA737oPLnDQ9wtoX0i" target="_blank">Guide</a>
 
 Anyways, as I was watching football one evening, and lamenting the decline of the once-great Patriots dynasty, the announcer made an interesting comment about how the performance of one of the top recievers in the NFL had suffered on a new team because of his mobile quarterback. Looking past the logical fallacy of correlation equalling causation, I decided to collect my own data to either confirm or deny the announcer's opinion. 
 
 ------------------------------------------------------------------------
 
-## Finding Your Data
+### Finding Your Data
 
 In order to collect data, you first have to find it. Fortunately for me and my question I didn't have to search too hard, as the NFL tracks and makes player, team, and many other statistics available on their website, <a href="https://www.nfl.com/stats/player-stats/" target="_blank">NFL.com/stats</a>. Specifically, I decided that I wanted to use the 'Stat Leaders' table, as well as statistics located on individual player pages to answer my question. 
 
@@ -47,7 +48,7 @@ As you can see, this page has a lot going on, but with the handy inspect element
 
 ------------------------------------------------------------------------
 
-## Should You Use Your Data?
+### Should You Use Your Data?
 
 Once you've found your data, it's easy to get excited and skip straight to scraping. One of the most important steps in the process however, and one that often gets forgotten, is to decide whether your data can be obtained ethically. Typically, websites will have a 'robots.txt' file that outlines permitted use of data on that site. Sometimes sites don't want individual users to use their information, and it's important to respect their wishes, and find a different source to collect your data. The site might also ask that you build a delay into your web scraping code to not overwhelm their servers, and if you ignore this request, they can prohibit you from collecting data. The very first website I tried to scrape had a limiting feature built in, and because I didn't know about ethical use or the importance of checking the 'robots.txt' file, I ended up getting banned from the site and had to find my data elsewhere. For more information about the ethics governing web scraping and the 'robots.txt' file, <a href="https://brightdata.com/blog/how-tos/robots-txt-for-web-scraping-guide" target="_blank">this blog</a> explains it well.
 
@@ -59,29 +60,34 @@ The only thing that affects us is the very last line, which prohibits users from
 
 ------------------------------------------------------------------------
 
-## Choosing the Right Tool
+### Choosing the Right Tool
 
 Well, we've officially made it to the hardest part of the whole process: getting our data into a form we can use. I'll be using a Jupyter Notebook to work through the process, and you can access my code and final results at the github link below. 
 
-<a href="https://github.com/chale15/NFL_Data/" style="text-decoration:none;">
-  <button style="background-color:#2dba4e; color:white; padding:10px 20px; border:none; border-radius:5px; font-size:16px;">
-    GitHub Repository
-  </button>
-</a>
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <a href="https://github.com/chale15/NFL_Data/" style="text-decoration:none;">
+    <button style="background-color:#2dba4e; color:white; padding:10px 20px; border:none; border-radius:5px; font-size:16px;">
+      GitHub Repository
+    </button>
+  </a>
+</div>
 
-We also have to figure out which package will be the best for our purposes. The two major packages for web scraping in Python are Beautiful Soup and Selenium. Beautiful Soup is a much more lightweight, easy to use package, making it ideal for simpler web scraping tasks, although it is more limited in scope and features than Selenium. Beautiful Soup works in tandem with the Requests package, allowing you to collect the entirety of a website as text in JSON or HTML form, and from there, filter down that text object within your coding environment to obtain the information you want without having to interact further with the website. Generally speaking, you want to use Beautiful Soup and Requests to obtain data as often as you possible. A good rule of thumb is if there's nothing that forces you to use Selenium, use Beautiful Soup. 
+
+
+We also have to figure out which package will be the best for our purposes. The two major packages for web scraping in Python are *Beautiful Soup* and *Selenium*. Beautiful Soup is a much more lightweight, easy to use package, making it ideal for simpler web scraping tasks, although it is more limited in scope and features than Selenium. Beautiful Soup works in tandem with the Requests package, allowing you to collect the entirety of a website as text in JSON or HTML form, and from there, filter down that text object within your coding environment to obtain the information you want without having to interact further with the website. Generally speaking, you want to use Beautiful Soup and Requests to obtain data as often as you possible. A good rule of thumb is if there's nothing that forces you to use Selenium, use Beautiful Soup. 
 
 Selenium, on the other hand, is much more powerful, much less intuitive, and much more demanding on your machine. It functions by imitating your browser, but is fully automated, allowing you to click on links, select search filters from a dropdown menu, and do anything else you would normally do manually, all without lifting a finger. Generally speaking, Selenium is the right choice if you have to interact with the website in some way to access your data, such as if you have to click a button to view the second page of a table.
 
 For further reading on these libraries, check out the guides below:
-|<a href="https://realpython.com/python-requests/" target="_blank">Requests</a>|<a href="https://realpython.com/beautiful-soup-web-scraper-python/" target="_blank">BeautifulSoup</a>|<a href="https://www.simplilearn.com/tutorials/python-tutorial/selenium-with-python" target="_blank">Selenium</a>|
+
+<a href="https://realpython.com/python-requests/" target="_blank">Requests</a>      <a href="https://realpython.com/beautiful-soup-web-scraper-python/" target="_blank">BeautifulSoup</a>       <a href="https://www.simplilearn.com/tutorials/python-tutorial/selenium-with-python" target="_blank">Selenium</a>
 
 
 For our data, there's some good news and bad news. The bad news is that interacting with the website as we scrape will make our lives considerably easier, so we have to use Selenium. The good news is that we don't need Selenium for everything, so we get to use a mix of the two packages to collect our data! Let's jump into the code!
 
 ------------------------------------------------------------------------
 
-## The Code
+### The Code
 
 As is good practice, we start by loading in the everything we need. For this project, I ended up using pandas, requests, BeautifulSoup, time, and re, but every project is slightly different and might require different tools. I also loaded in some Selenium specific functions, most of which I didn't end up needing, but that are good to have just in case. In order to use Selenium, you have to specify which browswer the tool will work through, and load the appropriate webdriver. I use Safari but you can easily modify the code to use whichever browser you prefer. 
 
@@ -116,7 +122,7 @@ I wanted to collect data spanning several years, so all of my code is nestled wi
 #### Initialize Selenium
 
 {%- highlight python -%} 
-    try:
+        try:
         driver.quit()
     except:
         print("No Driver")
@@ -201,7 +207,7 @@ Once we have everything we want, we save it away, wipe the lists we're using as 
 #### Compile Dataset
 
 {%- highlight python -%} 
-    i += 1
+        i += 1
 
     pass_df = pd.DataFrame({'QB':names1, 'YDS':qb_yards, 'ATT':qb_att, 'YPA':qb_ypa, 'CMP':qb_cmp, 'TDs':qb_td, 'INTs':qb_int, 'QBR':qb_rate, 'SCK':qb_sack})
     rush_df = pd.DataFrame({'QB':names, 'Team':teams, 'GP':games, 'Year':years, 'ATT(R)':r_atts, 'YDS(R)':r_yds, 'YPC':ypc, 'TDs(R)':r_tds})
@@ -233,7 +239,7 @@ After all of our loops have finished running, all that's left to do is to quit S
 
 #### Save Dataset
 {%- highlight python -%} 
-    driver.quit()
+        driver.quit()
     df = df.drop_duplicates(ignore_index=True)
     df.to_csv('./qb_data.csv')
 {%- endhighlight -%}
@@ -244,7 +250,7 @@ And there we have it! A successfully scraped quarterback stats dataset!
 
 ------------------------------------------------------------------------
 
-## EDA: Exploring Da Associations (in our data)
+### EDA (Exploring Da Associations)
 
 Great! Now the hard part is done, and we have some new data to explore! Let's take a look at our datasets
 
@@ -282,9 +288,13 @@ In this graphic, we see that overall, the recieving yards each season is mostly 
 
 ------------------------------------------------------------------------
 
-## Conclusion
+### Conclusion
 
-Well? That wasn't too bad, was it? And you've got some new skills to show for your time! As you can see, web scraping provides an efficient way to gather data directly from the internet, and with the help of tools like Beautiful Soup and Selenium, you can easily turn raw online content into structured data for analysis. And even though the process seems technical at first, it becomes manageable with a clear strategy and a step-by-step approach. From identifying the right tools to scraping and cleaning data, these skills will help you unlock a wealth of insights from even the most complex websites. Now that you've mastered the basics, it's time to dive in and start scraping your own data! Don't forget to check out the GitHub repository for the full code and data, and leave a comment to tell me what data you scraped!
+Well? That wasn't too bad, was it? And you've got some new skills to show for your time! 
+
+As you can see, web scraping provides an efficient way to gather data directly from the internet, and with the help of tools like Beautiful Soup and Selenium, you can easily turn raw online content into structured data for analysis. And even though the process seems technical at first, it becomes manageable with a clear strategy and a step-by-step approach. From identifying the right tools to scraping and cleaning data, these skills will help you unlock a wealth of insights from even the most complex websites. 
+
+Now that you've mastered the basics, it's time to dive in and start scraping your own data! Don't forget to check out the GitHub repository for the full code and data, and leave a comment to tell me what data you scraped!
 
 
 
