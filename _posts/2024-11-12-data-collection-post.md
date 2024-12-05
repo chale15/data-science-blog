@@ -268,20 +268,28 @@ Summary statistics can only get us so far, so lets look at some visuals.
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/wr_by_year_standard.png" alt="Yards by Year Standardized" />
 
+From this comparison of recieving yards per game by year, we can see that overall, this statistic is mostly unaffected over time. We do see a larger spread and more outliers for data from the 2024 season, however this is to be expected as the season is still going on, and consequently, there is less data than for previous (completed) seasons. 
+
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/wr_correlation.png" alt="Reciever Corrplot" />
+
+We also see from a simple heat map that many of the player statistics are highly correlated. For many problems, this would be a cause of concern, however for our data, this relationship makes sense. Generally, the best players have high values across the board, and those who catch the ball the most are more likely to produce more yards or points than other players.
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/top_players_yds.png" alt="Top Players (Yards)" />
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/top_players_tds.png" alt="Top Players (Touchdowns)" />
 
+Next, I wanted to quickly determine several top players in order to pick a candidate for further individual analysis. I selected Tyreek Hill, as he has shown to be consistently one of the best recievers in terms of production, yet he has played several games this year with a new quarterback, due to an injury early in the season. The graphic below can help us to visualize the effect of this change. 
+
 <img src="{{site.url}}/{{site.baseurl}}/assets/img/hill_stats_time.png" alt="Tyreek Hill Stats by Season" />
+
+While further statistical testing is needed to confirm our hypothesis, as well as cross validation with other players for a higher level of statistical rigor, we can see from the graph above that at least for this player, our hypothesis seems to have some validity. 
 
 
 ---
 
 ### Conclusion
 
-As you can see, web scraping offers a powerful way to access and customize data for analysis. With Beautiful Soup and Selenium, you can transform raw online content into structured datasets for research and insights. 
+As you can see, web scraping offers a powerful way to access and customize data for analysis. With Beautiful Soup and Selenium, you can transform raw online content into structured datasets for research and insights, and we were able to quickly obtain data curated to the question at hand.
 
 And even though the process seems technical at first, it becomes manageable with a clear strategy and a step-by-step approach. From identifying the right tools, to scraping and cleaning data, working on these skills will help you unlock a wealth of insights from even the most complex websites.
 
