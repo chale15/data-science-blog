@@ -34,6 +34,7 @@ To do this, I decided to create a Streamlit app, which can be found at the link 
   </a>
 </div>
 
+&nbsp;
 
 Additionally, all code used to create this app can be found <a href="https://github.com/chale15/NFL_Data_App" target = "_blank">here</a>.
 
