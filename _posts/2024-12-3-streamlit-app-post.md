@@ -7,7 +7,7 @@ image:
 display_image: false
 ---
 
-<p class="intro"><span class="dropcap">U</span>ncovering NFL Trends with Interactive Data: A Dive into the NFL Data with Streamlit</p>
+<p class="intro"><span class="dropcap">U</span>ncovering NFL Trends with Interactive Data: A Dive into NFL Data with Streamlit</p>
 
 ### Introduction
 
@@ -27,12 +27,13 @@ To do this, I decided to create a Streamlit app, which can be found at the link 
 
 
 <div style="display: flex; justify-content: center; align-items: center;">
-  <a href="https://nfl-data-chale15.streamlit.app/Quarterback_Stats" style="text-decoration:none;">
-    <button style="background-color:#2dba4e; color:white; padding:10px 20px; border:none; border-radius:5px; font-size:16px;">
+  <a href="https://nfl-data-chale15.streamlit.app" target = "_blank" style="text-decoration:none;">
+    <button style="background-color:#079ED9; color:white; padding:10px 20px; border:none; border-radius:5px; font-size:16px;">
       Streamlit App
     </button>
   </a>
 </div>
+
 
 Additionally, all code used to create this app can be found <a href="https://github.com/chale15/NFL_Data_App" target = "_blank">here</a>.
 
@@ -44,13 +45,15 @@ The purpose of this Streamlit app is to give users an intuitive and interactive 
 
 ---
 
-#### Key Features of the App:
+### Key App Features:
 
-- **Interactive Visualizations**: Users can interact with different charts, filtering by teams, players, and seasons. This makes it easy to see how a particular team's or player's performance changes over time. Additionally, as the majority of plots are created using plotly express, hovering over elements of a chart can provided more detailed data. 
+**Interactive Visualizations**: Users can interact with different charts, filtering by teams, players, and seasons. This makes it easy to see how a particular team's or player's performance changes over time. Additionally, as the majority of plots are created using plotly express, hovering over elements of a chart can provided more detailed data. 
    
-- **Player Comparison**: The app allows users to compare players' stats over multiple seasons, helping to identify top performers and trends. For example, comparing quarterbacks based on passing yards, touchdowns, and interceptions across multiple seasons.
+**Player Comparison**: The app allows users to compare players' stats over multiple seasons, helping to identify top performers and trends. For example, comparing quarterbacks based on passing yards, touchdowns, and interceptions across multiple seasons.
 
-- **Dynamic Filters**: The app offers dynamic filters where users can select specific metrics or seasons to narrow down their analysis. This allows users to explore the data in a variety of ways, depending on their questions or interests.
+**Dynamic Filters**: The app offers dynamic filters where users can select specific metrics or seasons to narrow down their analysis. This allows users to explore the data in a variety of ways, depending on their questions or interests.
+
+**Intuitive Navigation**: Easily navigate this app using the sidebar menu to change pages and tabs to explore different visualizations!
 
 <p align="center">
     <img src="{{site.url}}/{{site.baseurl}}/assets/img/app.png" alt="App" width="90%">
@@ -60,9 +63,9 @@ The purpose of this Streamlit app is to give users an intuitive and interactive 
 
 #### How Users Can Explore the Data:
   
-- **Explore League Trends**: Pick a statistic to visualize how overall league performance in that metric has changed over time, or display the best players in regard to that statistic for desired seasons
+**Explore League Trends**: Pick a statistic to visualize how overall league performance in that metric has changed over time, or display the best players in regard to that statistic for desired seasons
   
-- **Compare Teams or Players**: Compare players based on key performance metrics to see which ones have been most successful, including visualizing that comparison over multiple seasons
+**Compare Players**: Compare players based on key performance metrics to see which ones have been most successful, including visualizing that comparison over multiple seasons
 
 ---
 
@@ -94,7 +97,7 @@ In this blog post, we've explored several key relationships, such as changes in 
 
 I encourage you to dive into the app yourself and see what you can uncover. Whether you're interested in league dynamics, player trends, or game statistics, the app offers a powerful tool for exploring NFL data in ways that go beyond simple box scores.
 
-Once again, you can access the Streamlit app <a href="https://nfl-data-chale15.streamlit.app/Quarterback_Stats"" target = "_blank">here</a>, and for the full code and further exploration, check out the GitHub repository <a href="https://github.com/chale15/NFL_Data_App" target = "_blank">here</a>.
+Once again, you can access the Streamlit app <a href="https://nfl-data-chale15.streamlit.app" target = "_blank">here</a>, and for the full code and further exploration, check out the GitHub repository <a href="https://github.com/chale15/NFL_Data_App" target = "_blank">here</a>.
 
 What insights did you discover when exploring the data? Feel free to leave a comment and share your findings! Let’s keep the conversation going!
 
