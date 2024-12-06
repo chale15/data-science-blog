@@ -7,7 +7,7 @@ image:
 display_image: false
 ---
 
-<p class="intro"><span class="dropcap">L</span>earn how to access any data you want with two easy to use Python Packages.</p>
+<p class="intro"><span class="dropcap">L</span>earn how to access any data you want with two easy to use Python Packages</p>
 
 ### Introduction
 

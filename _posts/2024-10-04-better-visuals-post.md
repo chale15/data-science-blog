@@ -7,7 +7,7 @@ image:
 display_image: false
 ---
 
-<p class="intro"><span class="dropcap">T</span>ake your visuals from "meh" to "magnificent" using the 'Plotnine' Python library.</p>
+<p class="intro"><span class="dropcap">T</span>ake your visuals from "meh" to "magnificent" using the 'Plotnine' Python library</p>
 
 ### Introduction
 
